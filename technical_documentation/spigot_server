@@ -1,0 +1,16 @@
+#Getting and setting basic spigot server on a cloud VM
+
+sudo apt-get update
+sudo apt-get default-jre-headless
+
+#Need to create local directory for spigot and buildtools
+mkdir Spigot_Server && cd Spigot_Server
+
+wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+
+java -jar BuildTools.jar --rev latest
+
+cat <<EOF >> start.sh
+#!/bin/sh
+java -Xms1G -Xmx1G -jar spigot*.jar
+EOF
