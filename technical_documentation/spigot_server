@@ -1,7 +1,8 @@
 #Getting and setting basic spigot server on a cloud VM
 
 sudo apt-get update
-sudo apt-get default-jre-headless
+sudo apt-get install default-jre-headless
+sudo apt-get install git
 
 #Need to create local directory for spigot and buildtools
 mkdir Spigot_Server && cd Spigot_Server
