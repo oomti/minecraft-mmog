@@ -1,0 +1,9 @@
+Map data is stored in region file format. / .mca
+One region consist an area of 32x32 chunks.
+
+One chunk is consisted of 16x16x256 blocks
+
+4096Byte -  4096Byte  -  rest
+ADRESSES : TIMESTAMPS : CHUNKDATA
+1024entry- 1024entry  - 
+Chunkdata compressed in gzip/zlib
