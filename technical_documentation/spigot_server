@@ -17,3 +17,5 @@ java -Xms1G -Xmx1G -jar spigot*.jar
 EOF
 
 java -Xms1G -Xmx1G -jar spigot.jar
+
+#after first run edit eula file, set to true
