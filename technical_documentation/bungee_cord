@@ -1,0 +1,23 @@
+#download and install java
+sudo apt-get update
+sudo apt-get install default-jre-headless
+
+mkdir bungeeCord && cd bungeeCord
+#get the latest official bungeecord
+wget https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+#Create startup file
+cat <<EOF > start.sh
+Code (Text):
+#!/bin/sh
+
+java -Xms512M -Xmx512M -jar BungeeCord.jar
+EOF
+
+#Run startop file
+sudo bash start.sh
+
+#After this edit server.properties
+#Add all servers: name, IP:port, restricted
+
+#edit yaml to allow IP forwarding, if online
+#edit bungeecord: true in spigot.yml on all backends
