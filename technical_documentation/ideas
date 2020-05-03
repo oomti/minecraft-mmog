@@ -1,1 +1,16 @@
+simplified testing:
+
+  player server transfer on specific condition (pos.x > CONST)
+  
+  exporting player data to log file from server
+  
+  making backend independent of minecraft code(nodejs or python)
+  
+  handling programmatic inputs on servers
+  
+There is an expectation of densely populated areas and sparsely populated areas.
+Ideally servers should not change much in the area they cover, and so they would not need to reload a new segment of the map
+Map in memory vs map stored on disk
+Map data stored on a shared disk?
+
 
