@@ -1,0 +1,46 @@
+The backend will periodically need information of:
+
+For clustering
+
+-Player:
+FROM all server
+  name/id
+  pos(x,y,z)
+  server
+  
+ For harmonizing maps
+ 
+ -Map_data:
+   delta_chunk
+   timestamp
+   server
+   
+For sending player to other server:
+   -player_data:
+    name
+    pos
+    velocity
+    inventory
+    other_stats
+    
+   
+ The backend will send data:
+ 
+ -Player:
+  conditional: if needs to be sent to a new cluster
+    TO target server and previous server
+    player_data:
+      name
+      pos
+      velocity
+      inventory
+      other_stats
+      
+-Map_data:
+  update global map
+  update each server map for covered area
+  
+TO Database
+  
+
+       -
